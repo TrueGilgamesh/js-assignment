@@ -17,7 +17,7 @@ var allUsers = [
   },
   {
     nickname: "sobakajozhec",
-    password: "ekh228",
+    password: "sanyok228",
     groups: ["basic", "manager"]
   },
   {
@@ -29,14 +29,12 @@ var allUsers = [
 
 /**
  * Все права.
- * @global
  * @type {string[]}
  */
 var allRights = ["manage content", "play games", "delete users", "view site"];
 
 /**
  * Все группы.
- * @global
  * @type {Object.<string, string[]>}
  */
 var allGroups = {
@@ -47,21 +45,18 @@ var allGroups = {
 
 /**
  * Счетчик групп, увеличивается для каждой созданной группы.
- * @global
  * @type {number}
  */
 var groupCounter = 1;
 
 /**
  * Счетчик прав доступа, увеличивается для каждого созданного права доступа.
- * @global
  * @type {number}
  */
 var rightCounter = 1;
 
 /**
  * Сессия пользователя.
- * @global
  * @type {string}
  */
 var session;
@@ -251,7 +246,7 @@ function deleteRight(right) {
   var rightId = allRights.indexOf(right);
 
   if (rightId === -1) {
-    throw new Error("Право не найдено");
+    throw new Error("Право не найдено чё ты удаляешь");
   }
 
   allRights.splice(rightId, 1);
